@@ -3,7 +3,7 @@ local mod = get_mod("RemoveTagSkulls")
 local SettingNames = mod:io_dofile("RemoveTagSkulls/scripts/setting_names")
 
 local function ShouldFilterDaemonhost(marker)
-    if marker and mod:get(SettingNames.KeepDaemonhostMarket) then
+    if marker and mod:get(SettingNames.KeepDaemonhostMarker) then
         local unit_data_extension = ScriptUnit.extension(marker.unit, "unit_data_system")
         if unit_data_extension and unit_data_extension:breed_name() == "chaos_daemonhost" then
             return false

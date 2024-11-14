@@ -3,7 +3,7 @@
 local SettingNames = {
 	RemoveTagSkull = "remove_tag_skull",
 	RemoveVeteranTagSkull = "remove_veteran_tag_skull",
-	KeepDaemonhostMarket = "keep_daemonhostl_market",
+	KeepDaemonhostMarker = "keep_daemonhostl_Marker",
 }
 
 return SettingNames
