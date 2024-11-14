@@ -2,19 +2,36 @@ local mod = get_mod("RemoveTagSkulls")
 
 local SettingNames = mod:io_dofile("RemoveTagSkulls/scripts/setting_names")
 
-local marker_type_unit_threat = "unit_threat"
-local marker_type_unit_threat_veteran = "unit_threat_veteran"
-
-mod:hook(CLASS.HudElementWorldMarkers, "_template_by_type", function(func, self, marker_type, clone)
-	mod:debug("--- [HudElementWorldMarkers:_template_by_type] ---")
-    mod:debug("marker_type: %s", marker_type)
-    if (mod:get(SettingNames.RemoveTagSkull) and marker_type == marker_type_unit_threat)
-        or (mod:get(SettingNames.RemoveVeteranTagSkull) and marker_type == marker_type_unit_threat_veteran) then
-        local template = table.clone(self._marker_templates[marker_type])
-        template.max_distance = 0
-        return template
+local function ShouldFilterDaemonhost(marker)
+    if marker and mod:get(SettingNames.KeepDaemonhostMarket) then
+        local unit_data_extension = ScriptUnit.extension(marker.unit, "unit_data_system")
+        if unit_data_extension and unit_data_extension:breed_name() == "chaos_daemonhost" then
+            return false
+        end
     end
-    mod:debug("--------------------")
+    return true
+end
 
-	return func(self, marker_type, clone)
+mod:hook_require("scripts/ui/hud/elements/world_markers/templates/world_marker_template_unit_threat", function(instance)
+	mod:hook(instance, "on_enter", function(func, widget, marker, template)
+        if mod:get(SettingNames.RemoveTagSkull) then
+            if marker and ShouldFilterDaemonhost(marker) then
+                marker.template.max_distance = 0
+            end
+        end
+
+		return func(widget, marker, template)
+	end)
+end)
+
+mod:hook_require("scripts/ui/hud/elements/world_markers/templates/world_marker_template_unit_threat_veteran", function(instance)
+	mod:hook(instance, "on_enter", function(func, widget, marker, template)
+        if mod:get(SettingNames.RemoveVeteranTagSkull) then
+            if marker and ShouldFilterDaemonhost(marker) then
+                marker.template.max_distance = 0
+            end
+        end
+
+		return func(widget, marker, template)
+	end)
 end)

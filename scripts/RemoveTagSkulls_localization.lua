@@ -17,4 +17,7 @@ return {
   [SettingNames.RemoveVeteranTagSkull] = {
     en = "Remove Veteran Tag Skull"
   },
+  [SettingNames.KeepDaemonhostMarket] = {
+    en = "Keep Daemonhost Market"
+  },
 }

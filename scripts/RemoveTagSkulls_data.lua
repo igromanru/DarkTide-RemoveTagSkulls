@@ -20,6 +20,11 @@ return {
 				type = "checkbox",
 				default_value = true
 			},
+			{
+				setting_id = SettingNames.KeepDaemonhostMarket,
+				type = "checkbox",
+				default_value = true
+			},
 		},
 	},
 }
