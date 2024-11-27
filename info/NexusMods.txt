@@ -13,11 +13,17 @@ It has options to disable the Red Skull and Yellow Skull from Veteran.
 4. In game you can disable options in the [b]Mod Options[/b] menu.
 
 
+[font=Verdana][size=4][b]Mod Conflicts[/b][/size][/font]
+[list]
+[*]Obviously the mod is not compatible with the [url=https://www.nexusmods.com/warhammer40kdarktide/mods/26]No Skull[/url] mod.
+[*]Another mod that has the option to remove Tag Markers is [url=https://www.nexusmods.com/warhammer40kdarktide/mods/14]Numeric UI[/url]. But as long as you don't disable markers with Numeric UI mod, there are no conflicts.
+[/list]
+
 [b][url=https://github.com/igromanru/DarkTide-RemoveTagSkulls]GitHub Page[/url][/b]
 
 [font=Arial][size=4]Highest form of appreciation[/size][/font]
 [size=2]If you like my work and feel generous, you can support me.[/size]
+[url=https://ko-fi.com/igromanru][img]https://i.imgur.com/rGcPxK8.png[/img][/url]
 [b]BTC:[/b] bc1q3frvfljn7ut09ggep2gxugv4ypqvyexz3ya7ja
 [b]ETH:[/b] 0xEedBbF6eFa84198cc94fE4Bf6FBB5dfa674AF86b
 [b]ADA:[/b] addr1qyx2sd2rgwdzvjhwnc35udx4k6w9lg524pwrf0llr7d2shzrewyq3nqyxfceuhgh5n5ucx3n8ws0n48krrlpw4khtedq4hzv93
-[url=https://ko-fi.com/igromanru][img]https://i.imgur.com/rGcPxK8.png[/img][/url]
