@@ -1,3 +1,7 @@
+--[[
+    Author: Igromanru
+    Mod Name: Remove Tag Skulls
+]]
 local mod = get_mod("RemoveTagSkulls")
 
 local SettingNames = mod:io_dofile("RemoveTagSkulls/scripts/setting_names")
@@ -17,6 +21,11 @@ return {
 			},
 			{
 				setting_id = SettingNames.RemoveVeteranTagSkull,
+				type = "checkbox",
+				default_value = true
+			},
+			{
+				setting_id = SettingNames.RemoveAdamantTagSkull,
 				type = "checkbox",
 				default_value = true
 			},

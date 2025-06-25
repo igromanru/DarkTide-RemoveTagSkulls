@@ -1,3 +1,7 @@
+--[[
+    Author: Igromanru
+    Mod Name: Remove Tag Skulls
+]]
 local mod = get_mod("RemoveTagSkulls")
 
 local SettingNames = mod:io_dofile("RemoveTagSkulls/scripts/setting_names")
@@ -16,6 +20,9 @@ return {
   },
   [SettingNames.RemoveVeteranTagSkull] = {
     en = "Remove Veteran Tag Skull"
+  },
+  [SettingNames.RemoveAdamantTagSkull] = {
+    en = "Remove Adamant (Dog target) Tag Skull"
   },
   [SettingNames.KeepDaemonhostMarker] = {
     en = "Keep Daemonhost Marker"
